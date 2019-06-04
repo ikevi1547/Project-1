@@ -1,0 +1,107 @@
+body
+{
+    font-family: monospace, 'Times New Roman', Times, serif;
+}
+#head_image
+{
+    height: 5rem;
+    width: 5rem;
+}
+.content_wrapper
+{
+    margin: 3rem;
+    clear: both;
+    position: relative;
+    top: 1rem;
+}
+#alertPage
+{
+    display: none;
+    background: black;
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.9;
+}
+#alertBox #payment_box
+{
+    display: none;
+    margin: 0% 20%;
+    padding: 40px;
+    background: whitesmoke;
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#alertBox #invoice_box
+{
+    display: none;
+    margin: 0% 20%;
+    padding: 40px;
+    background: whitesmoke;
+    position: relative;
+    top: -800px;
+}
+.quantity_input_field
+{
+    width: 5%;
+}
+@media (max-width: 1100px)
+{
+    .quantity_input_field
+    {
+        width: 20%;
+    }
+}
+@media (max-width: 768px)
+{
+    #alertBox
+    {
+        margin: 0 auto;
+    }
+    #alertBox #payment_box
+    {
+        display: none;
+        margin: 0% 20%;
+        padding: 40px;
+        background: whitesmoke;
+        position: fixed;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    #alertBox #invoice_box
+    {
+        display: none;
+        padding: 40px;
+        margin: 0 auto;
+        width: 100%;
+        background: whitesmoke;
+        position: fixed;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        overflow: scroll;
+    }
+    
+    #alertPage
+    {
+        opacity: 0.98;
+    }
+    .quantity_input_field
+    {
+        width: 20%;
+    }
+}
+#btn_buy_cart_list
+{
+    display: none;
+}
