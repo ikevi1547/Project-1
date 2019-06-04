@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="Kevin Peter J">
+    <meta name="description" content="Guvi Project Phase 1">
+    <meta charset="UTF-8">
+    <title>Online Shopping Mart</title>
+    <link rel="icon" href="images/title/favicon.ico">
+    <!-- Including Cascade Sheets -->
+    <link rel="stylesheet" href="lib/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="lib/css/theme.css" type="text/css">
+</head>
+
+<body>
+
+    <!-- Head Section Start-->
+    <header class="navbar navbar-inverse navbar-fixed-top">
+        <img data-toggle="modal" style="cursor: pointer;" data-target="#openCart" class="navbar-left" onclick="OpencartFunction()" id="head_image" src="images/header/shopping_cart.png"/>
+        <sub class="badge navbar-left" id="addcart_badge">0</sub>    
+        <a class="navbar-brand" href="#" style="cursor: pointer">ONLINE SHOPPING MART</a>
+    </header>
+    <!-- Head Section End -->
+
+    <!-- Content Section Start -->
+    <div class="container" style="margin-top: 100px;">
+        <div class="media panel">
+            <div class="media-left">
+                <img src="images/content/shopping/shoe.jpg" class="media-object" style="height: 100px; width: 120px"/>
+            </div>
+            <div class="media-body">
+                <h4>Shoe Black</h4>
+                <p>Price 50$</p>
+                <p>Select Qty -> 1 X <input type="number" id="Shoe" min="1" value="1" class="text-center quantity_input_field"/></p>
+            </div>
+            <div class="media-right">
+                    <button class="btn btn-danger" onclick="buyNow('Shoe',50,'Shoe Black')"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+                    <br><br>
+                <button class="btn btn-primary" onclick="addToCart('Shoe',50,'Shoe Black')"><span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART</button>
+            </div>
+        </div>
+        <div class="media panel">
+            <div class="media-left">
+                <img src="images/content/shopping/MI_Band_Watch.jpg" class="media-object" style="height: 100px; width: 120px"/>
+            </div>
+            <div class="media-body">
+                <h4>MI Band 3 (Black)</h4>
+                <p>Price 30$</p>
+                <p>Select Qty -> 1 X <input type="number" id="Band" min="1" value="1" class="text-center quantity_input_field"/></p>
+            </div>
+            <div class="media-right">
+                    <button class="btn btn-danger" onclick="buyNow('Band',30,'MI Band 3 (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+                    <br><br>
+                <button class="btn btn-primary" onclick="addToCart('Band',30,'MI Band 3 (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART</button>
+            </div>
+        </div>
+        <div class="media panel">
+            <div class="media-left">
+                <img src="images/content/shopping/SandDisk_Pendrive_32GB.jpg" class="media-object" style="height: 100px; width: 120px"/>
+            </div>
+            <div class="media-body">
+                <h4>SanDisk Ultra Dual 32GB USB 3.0 OTG Pen Drive</h4>
+                <p>Price 10$</p>
+                <p>Select Qty -> 1 X <input type="number" id="SanDisk_Pen" min="1" value="1" class="text-center quantity_input_field"/></p>
+            </div>
+            <div class="media-right">
+                    <button class="btn btn-danger" onclick="buyNow('SanDisk_Pen',10,'SanDisk Ultra Dual 32GB USB 3.0 OTG Pen Drive')"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+                    <br><br>
+                <button class="btn btn-primary" onclick="addToCart('SanDisk_Pen',10,'SanDisk Ultra Dual 32GB USB 3.0 OTG Pen Drive')"><span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART</button>
+            </div>
+        </div>
+        <div class="media panel">
+            <div class="media-left">
+                <img src="images/content/shopping/Mouse.jpg" class="media-object" style="height: 100px; width: 120px"/>
+            </div>
+            <div class="media-body">
+                <h4>Logitech M235 Wireless Mouse for Windows and Mac - Black/Grey</h4>
+                <p>Price 12$</p>
+                <p>Select Qty -> 1 X <input type="number" id="Mouse_Wireless" min="1" value="1" class="text-center quantity_input_field"/></p>
+            </div>
+            <div class="media-right">
+                    <button class="btn btn-danger" onclick="buyNow('Mouse_Wireless',12,'Logitech M235 Wireless Mouse for Windows and Mac - Black/Grey')"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+                    <br><br>
+                <button class="btn btn-primary" onclick="addToCart('Mouse_Wireless',12,'Logitech M235 Wireless Mouse for Windows and Mac - Black/Grey')"><span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART</button>
+            </div>
+        </div>
+        <div class="media panel">
+            <div class="media-left">
+                <img src="images/content/shopping/JIO.jpg" class="media-object" style="height: 100px; width: 120px"/>
+            </div>
+            <div class="media-body">
+                <h4>JioFi 4G Hotspot M2S 150 Mbps Jio 4G Portable Wi-Fi Data Device (Black)</h4>
+                <p>Price 15$</p>
+                <p>Select Qty -> 1 X <input type="number" id="jio" min="1" value="1" class="text-center quantity_input_field"/></p>
+            </div>
+            <div class="media-right">
+                    <button class="btn btn-danger" onclick="buyNow('jio',15,'JioFi 4G Hotspot M2S 150 Mbps Jio 4G Portable Wi-Fi Data Device (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+                    <br><br>
+                <button class="btn btn-primary" onclick="addToCart('jio',15,'JioFi 4G Hotspot M2S 150 Mbps Jio 4G Portable Wi-Fi Data Device (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART</button>
+            </div>
+        </div>
+        <div class="media panel">
+            <div class="media-left">
+                <img src="images/content/shopping/WIFI_Adapter.jpg" class="media-object" style="height: 100px; width: 120px"/>
+            </div>
+            <div class="media-body">
+                <h4>TP-Link TL-WN725N 150Mbps Wireless N Nano USB Adapter (Black)</h4>
+                <p>Price 8$</p>
+                <p>Select Qty -> 1 X <input type="number" id="adap" min="1" value="1" class="text-center quantity_input_field"/></p>
+            </div>
+            <div class="media-right">
+                    <button class="btn btn-danger" onclick="buyNow('adap',8,'TP-Link TL-WN725N 150Mbps Wireless N Nano USB Adapter (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+                    <br><br>
+                <button class="btn btn-primary" onclick="addToCart('adap',8,'TP-Link TL-WN725N 150Mbps Wireless N Nano USB Adapter (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART</button>
+            </div>
+        </div>
+        <div class="media panel">
+            <div class="media-left">
+                <img src="images/content/shopping/VGA.jpg" class="media-object" style="height: 100px; width: 120px"/>
+            </div>
+            <div class="media-body">
+                <h4>Terabyte HDMI to VGA Converter Adapter Cable (Black)</h4>
+                <p>Price 6$</p>
+                <p>Select Qty -> 1 X <input type="number" id="vga" min="1" value="1" class="text-center quantity_input_field"/></p>
+            </div>
+            <div class="media-right">
+                    <button class="btn btn-danger" onclick="buyNow('vga',6,'Terabyte HDMI to VGA Converter Adapter Cable (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+                    <br><br>
+                <button class="btn btn-primary" onclick="addToCart('vga',6,'Terabyte HDMI to VGA Converter Adapter Cable (Black)')"><span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART</button>
+            </div>
+        </div>
+        <div class="btn-group btn-group-justified">
+                <a href="#" class="btn btn-primary" style="visibility: hidden">NONE</a>
+                <a  data-toggle="modal" style="cursor: pointer;" onclick="OpencartFunction()" data-target="#openCart"  class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Click Here to View Cart</a>
+                <a href="#" class="btn btn-primary" style="visibility: hidden">NONE</a>
+        </div>
+    </div>
+    <div class="content_wrapper">
+       <div id="alertPage"></div>
+            <div class="alert" id="alertBox">
+                <div id="payment_box">
+                    <h3 style="text-align: center">Payment Page<span style="float: right;cursor: pointer;" title="Close" onclick="close_alert_page()">X</span></h3>
+                    <center>
+                        <br>
+                        <fieldset class="form-group row">
+                            <legend>Fill User Details</legend>
+                            <div class="col-xs-4">
+                                    <input type="hidden" />
+                            </div>
+                            <div class="col-xs-12">
+                                    <label for="name_field">Customer Name</label>
+                                    <input class="form-control text-center" id="name_field" placeholder="Eg: Peter" type="text"/>
+                                    <br>
+                                    <label for="contact_info">E- Mail ID</label>
+                                    <input class="form-control text-center" id="contact_info" placeholder="Eg: abc@gmail.com" type="email" />
+                                    <br>
+                                    <label for="card_info">Card Number</label>
+                                    <input class="form-control text-center" id="card_info" placeholder="Eg: 5124 **** **** ****" type="text" maxlength="16"/>
+                            </div>
+                        </fieldset>
+                        <br>
+                        <button class="btn btn-success" onclick="payment(document.getElementById('name_field').value,document.getElementById('contact_info').value,document.getElementById('card_info').value)">Pay Now</button>
+                    </center>
+                </div>
+                <div id="invoice_box">
+                        <div class="media panel">
+                                <div class="media-body">
+                                    <h3 class="text-center"><b>Invoice Bill</b></h3>
+                                    <h4 class="text-left"><b>Customer Details</b></h4>
+                                    <p>Name : <span id="bill_name"></span></p>
+                                    <p>Email-ID : <span id="bill_email"></span></p>
+                                    <p>Card Number : <span id="bill_card"></span></p>
+                                    <p>INV Date : <span id="bill_date"></span></p>
+                                </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Item-Name</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bill_table">
+                                <tr>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">Total</td>
+                                    <td id="total_amount_bill"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <p class="text-center">Thank you for your business!</p>
+                </div>
+            </div>
+       
+    </div>
+    <!-- Content Section end -->
+    <!-- Modal -->
+<div id="openCart" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Cart List</h4>
+        </div>
+        <div class="modal-body">
+          <p id="data_cart_list">Items Selected for purchasing</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" onclick="openPaymentPage()" id="btn_buy_cart_list" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-shopping-cart"></span> BUY NOW</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+   <!-- Including js Files -->
+   <script type="text/javascript" src="lib/js/jquery.js"></script>
+   <script type="text/javascript" src="lib/js/bootstrap.js"></script>
+   <script type="text/javascript" src="lib/js/main.js"></script>
+</html>
